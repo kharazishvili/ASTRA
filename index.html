@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>ASTRA Research | AI-Powered Scientific Research Assistant</title>
+  <meta name="title" content="ASTRA Research | AI-Powered Scientific Research Assistant">
+  <meta name="description" content="Accelerate scientific discovery with ASTRA Research. The autonomous AI assistant that helps students, researchers, and scientists discover literature, distill complex research, and uncover cross-disciplinary connections.">
+  <meta name="keywords" content="scientific research AI, literature discovery, research assistant, academic AI, paper summarization, knowledge graph, systematic literature review">
+  <meta name="author" content="ASTRA Research Technologies">
+  <meta name="theme-color" content="#070D1E">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://astraresearch.ai/">
+  <meta property="og:title" content="ASTRA Research | AI-Powered Scientific Research Assistant">
+  <meta property="og:description" content="Discover scientific literature, understand complex papers, and identify latent research connections with autonomous AI synthesis.">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23070D1E'/%3E%3Ccircle cx='600' cy='315' r='180' fill='none' stroke='%2300D2FF' stroke-width='4' opacity='0.4'/%3E%3Ctext x='600' y='330' font-family='system-ui, sans-serif' font-size='64' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'%3EASTRA Research%3C/text%3E%3C/svg%3E">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASTRA Research | AI-Powered Scientific Research Assistant">
+  <meta name="twitter:description" content="Discover scientific literature, understand complex papers, and identify latent research connections with autonomous AI synthesis.">
+
+  <!-- Favicon (Inline SVG Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230B132B' stroke='%2300D2FF' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%2300D2FF'/%3E%3Cpath d='M16 4 L16 10 M16 22 L16 28 M4 16 L10 16 M22 16 L28 16' stroke='%2338BDF8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="ASTRA Research Home">
+        <svg class="brand-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" stroke="url(#logo-grad)" stroke-width="2" stroke-dasharray="3 2" />
+          <circle cx="18" cy="18" r="6" fill="#00D2FF" />
+          <path d="M18 4V10M18 26V32M4 18H10M26 18H32" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+          <circle cx="8" cy="8" r="2.5" fill="#818CF8" />
+          <circle cx="28" cy="28" r="2.5" fill="#818CF8" />
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00D2FF" />
+              <stop offset="1" stop-color="#818CF8" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="brand-text-group">
+          <span class="brand-name">ASTRA<span class="brand-accent">.</span></span>
+          <span class="brand-tag">RESEARCH</span>
+        </div>
+        <span class="badge-version" aria-label="Version 2.4 Active">v2.4</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation -->
+      <nav class="primary-nav" id="primary-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Overview</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#workflow" class="nav-link">Methodology</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-cta-mobile">
+          <a href="#contact" class="btn btn-primary btn-sm">Request Access</a>
+        </div>
+      </nav>
+
+      <!-- Header Action & Mobile Menu Toggle -->
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-desktop">Request Access</a>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main id="main-content">
+
+    <!-- 1. Hero Section -->
+    <section class="section hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="hero-grid-pattern"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="eyebrow-pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            <span>Autonomous Scientific Literature Intelligence</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-title">
+            Accelerating Scientific Research with <span class="gradient-text">Autonomous AI</span>
+          </h1>
+
+          <p class="hero-description">
+            ASTRA Research empowers students, academic investigators, and enterprise scientists to navigate millions of peer-reviewed papers, distill intricate methodologies, and unveil latent cross-disciplinary discoveries in seconds.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span>Start Researching Free</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4.167 10h11.666m0 0l-4.166-4.167m4.166 4.167l-4.166 4.167" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#features" class="btn btn-secondary btn-lg">
+              <span>Explore Features</span>
+            </a>
+          </div>
+
+          <div class="hero-badges">
+            <div class="hero-badge-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="badge-icon" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Zero hallucinations guarantee</span>
+            </div>
+            <div class="hero-badge-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="badge-icon" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>Direct DOI & PubMed citations</span>
+            </div>
+            <div class="hero-badge-item">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="badge-icon" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span>SOC2 & HIPAA compliant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Hero Showcase Console -->
+        <div class="hero-visual" aria-label="Interactive ASTRA Research Console Showcase">
+          <div class="console-card">
+            <!-- Console Window Bar -->
+            <div class="console-header">
+              <div class="console-controls" aria-hidden="true">
+                <span class="control-dot dot-red"></span>
+                <span class="control-dot dot-yellow"></span>
+                <span class="control-dot dot-green"></span>
+              </div>
+              <div class="console-title-pill">
+                <svg viewBox="0 0 16 16" fill="currentColor" class="console-icon" aria-hidden="true">
+                  <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2a5 5 0 110 10A5 5 0 018 3zm0 2.5a.75.75 0 00-.75.75v2.5c0 .414.336.75.75.75h2a.75.75 0 000-1.5H8.75V6.25A.75.75 0 008 5.5z"/>
+                </svg>
+                <span>astra-core // live-synthesis-stream</span>
+              </div>
+              <div class="console-status-pill">
+                <span class="pulse-indicator" aria-hidden="true"></span>
+                <span>Active Model</span>
+              </div>
+            </div>
+
+            <!-- Preset Hypothesis Switcher -->
+            <div class="console-query-bar">
+              <span class="query-prefix" aria-hidden="true">Query:</span>
+              <div class="query-chips" role="tablist" aria-label="Interactive Research Hypotheses">
+                <button type="button" class="query-chip active" role="tab" aria-selected="true" data-topic="neuro" id="tab-neuro">Tau Kinetics in AD</button>
+                <button type="button" class="query-chip" role="tab" aria-selected="false" data-topic="quantum" id="tab-quantum">Quantum Biology</button>
+                <button type="button" class="query-chip" role="tab" aria-selected="false" data-topic="crispr" id="tab-crispr">CRISPR Specificity</button>
+              </div>
+            </div>
+
+            <!-- Console Body Output Area -->
+            <div class="console-body" id="console-display" role="tabpanel" aria-labelledby="tab-neuro">
+              <div class="console-meta-row">
+                <span class="meta-tag">Papers Indexed: <strong>18,420</strong></span>
+                <span class="meta-tag">Latency: <strong>380ms</strong></span>
+                <span class="meta-tag highlight">Confidence: <strong>99.4%</strong></span>
+              </div>
+
+              <div class="synthesis-block">
+                <h2 class="synthesis-headline" id="console-headline">Tau Oligomerization & CDK5 Cross-Talk</h2>
+                <p class="synthesis-text" id="console-summary">
+                  Multi-cohort systematic synthesis confirms hyperphosphorylation at Thr231 initiates pre-filament structural disruption. Cross-citation topology isolates 4 pivotal papers linking TREM2 microglial clearance deficiency with CDK5 activation rates.
+                </p>
+              </div>
+
+              <div class="console-evidence-grid">
+                <div class="evidence-node">
+                  <span class="node-label">Primary Mechanism</span>
+                  <span class="node-val" id="console-node-1">CDK5 / p25 Activator Complex</span>
+                </div>
+                <div class="evidence-node">
+                  <span class="node-label">Contradiction Index</span>
+                  <span class="node-val" id="console-node-2">Low (2 dissenters / 144 studies)</span>
+                </div>
+                <div class="evidence-node">
+                  <span class="node-label">Translational Target</span>
+                  <span class="node-val" id="console-node-3">Allosteric Kinase Inhibition</span>
+                </div>
+              </div>
+
+              <div class="console-footer-info">
+                <span class="citation-stamp" id="console-citations">Referenced: Nature Neurosci. (2024), Science Transl. Med. (2025), Cell (2025)</span>
+                <span class="verified-tag">
+                  <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  Verified DOI Evidence
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="stats-strip">
+        <div class="container stats-container">
+          <div class="stat-card">
+            <span class="stat-number">250M+</span>
+            <span class="stat-label">Peer-Reviewed Papers Indexed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">10&times;</span>
+            <span class="stat-label">Faster Systematic Reviews</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">99.4%</span>
+            <span class="stat-label">Methodology Extraction Accuracy</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1,400+</span>
+            <span class="stat-label">Research Institutes & Labs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow-pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            <span>Why ASTRA Research</span>
+          </div>
+          <h2 id="about-title" class="section-title">
+            Democratizing Scientific Discovery at Exponential Scale
+          </h2>
+          <p class="section-subtitle">
+            Scientific output doubles every nine years, generating over 3 million papers annually. Vital connections remain buried in disciplinary silos. ASTRA Research is purpose-built to break down these barriers, transforming how humanity extracts, validates, and correlates scientific knowledge.
+          </p>
+        </div>
+
+        <!-- Stakeholder Value Grid -->
+        <div class="about-grid">
+          <!-- Persona 1: Students -->
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <h3 class="about-card-title">For Students & Early Researchers</h3>
+            <p class="about-card-desc">
+              Master unfamiliar disciplines without getting drowned in impenetrable academic jargon. ASTRA breaks down dense papers into clear foundational assumptions, mathematical intuitions, and essential reading pathways.
+            </p>
+            <ul class="about-card-bullets">
+              <li>Interactive concept deconstruction</li>
+              <li>Plain-language explanations of complex protocols</li>
+              <li>Guided literature onboarding for thesis research</li>
+            </ul>
+          </article>
+
+          <!-- Persona 2: Academic Investigators -->
+          <article class="about-card about-card-featured">
+            <div class="featured-badge" aria-hidden="true">Core Beneficiary</div>
+            <div class="about-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24m-4.24-9.9 4.24-4.24M4.93 19.07l4.24-4.24"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="about-card-title">For Faculty & Principal Investigators</h3>
+            <p class="about-card-desc">
+              Accelerate grant applications, identify unexplored literature gaps, and conduct exhaustive systematic reviews in days instead of months. Never miss prior art that could jeopardize funding or novelty claims.
+            </p>
+            <ul class="about-card-bullets">
+              <li>Automated prior-art & novelty validation</li>
+              <li>Comprehensive systematic review synthesis</li>
+              <li>Continuous citation & preprint radar alerts</li>
+            </ul>
+          </article>
+
+          <!-- Persona 3: Industry & Biotech Scientists -->
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 3h15M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/>
+                <path d="M6 14h12"/>
+              </svg>
+            </div>
+            <h3 class="about-card-title">For Industry & Biotech Scientists</h3>
+            <p class="about-card-desc">
+              Bridge the translational gap between basic science and commercial therapeutics or materials. Synthesize experimental trials across chemistry, oncology, genomics, and computation to de-risk pipeline decisions.
+            </p>
+            <ul class="about-card-bullets">
+              <li>Translational clinical trial cross-referencing</li>
+              <li>Patent and peer-reviewed correlation</li>
+              <li>Experimental protocol discrepancy analysis</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Value Proposition Comparison -->
+        <div class="comparison-block" id="workflow">
+          <div class="comparison-header">
+            <h3>How ASTRA Transforms the Scientific Workflow</h3>
+            <p>Moving from manual, fragmented search to unified cognitive intelligence</p>
+          </div>
+          <div class="comparison-columns">
+            <div class="comparison-col col-legacy">
+              <div class="col-badge">Traditional Workflow</div>
+              <ul class="comparison-list">
+                <li>
+                  <span class="icon-cross" aria-hidden="true">&times;</span>
+                  <div>
+                    <strong>Keyword Dependency:</strong> Queries fail when authors use alternate synonyms or across adjacent disciplines.
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-cross" aria-hidden="true">&times;</span>
+                  <div>
+                    <strong>Manual PDF Skimming:</strong> Hundreds of hours lost reading abstracts to find a single statistical parameter.
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-cross" aria-hidden="true">&times;</span>
+                  <div>
+                    <strong>Disciplinary Isolation:</strong> Crucial analogies between biology, physics, and computer science remain unnoticed.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="comparison-col col-astra">
+              <div class="col-badge badge-astra">ASTRA Research Platform</div>
+              <ul class="comparison-list">
+                <li>
+                  <span class="icon-check" aria-hidden="true">&#10003;</span>
+                  <div>
+                    <strong>Neural Hypothesis Search:</strong> Understands deep conceptual semantics, mathematical models, and causal relationships.
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check" aria-hidden="true">&#10003;</span>
+                  <div>
+                    <strong>Targeted Synthesis:</strong> Instantly extracts sample sizes, protocols, p-values, and explicit author limitations.
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check" aria-hidden="true">&#10003;</span>
+                  <div>
+                    <strong>Relational Knowledge Graphs:</strong> Bridges multidisciplinary domains through 4.8 billion citation & co-occurrence edges.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Features Section (EXACTLY THREE FEATURE CARDS) -->
+    <section class="section features-section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="eyebrow-pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            <span>Core Capabilities</span>
+          </div>
+          <h2 id="features-title" class="section-title">
+            Engineered for Uncompromising Scientific Rigor
+          </h2>
+          <p class="section-subtitle">
+            ASTRA Research is built upon three foundational pillars designed to eliminate scientific blind spots, automate literature extraction, and ignite cross-pollination.
+          </p>
+        </div>
+
+        <!-- EXACTLY THREE FEATURE CARDS -->
+        <div class="features-grid">
+
+          <!-- Feature Card 1: Literature Discovery -->
+          <article class="feature-card" id="feature-discovery">
+            <div class="feature-card-glow" aria-hidden="true"></div>
+            <div class="feature-header">
+              <div class="feature-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <circle cx="11" cy="11" r="3" stroke-dasharray="2 2"></circle>
+                </svg>
+              </div>
+              <span class="feature-index">01</span>
+            </div>
+
+            <div class="feature-content">
+              <h3 class="feature-title">Literature Discovery</h3>
+              <p class="feature-headline-desc">Autonomous Semantic Exploration Across 250M+ Papers</p>
+              <p class="feature-body-text">
+                Transcend primitive keyword queries. Formulate queries as natural scientific hypotheses. ASTRA parses vector representations of millions of open-access papers, preprints, and institutional archives to retrieve methodologically relevant publications regardless of terminology differences.
+              </p>
+
+              <div class="feature-details">
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Multi-vector semantic similarity matching</span>
+                </div>
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Real-time arXiv, bioRxiv & PubMed daily stream</span>
+                </div>
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Automated retraction & methodological flaw alerts</span>
+                </div>
+              </div>
+
+              <div class="feature-footer">
+                <span class="feature-stat-pill">Coverage: 250M+ Publications</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature Card 2: AI Research Summaries -->
+          <article class="feature-card" id="feature-summaries">
+            <div class="feature-card-glow" aria-hidden="true"></div>
+            <div class="feature-header">
+              <div class="feature-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <span class="feature-index">02</span>
+            </div>
+
+            <div class="feature-content">
+              <h3 class="feature-title">AI Research Summaries</h3>
+              <p class="feature-headline-desc">Multi-Tiered, Zero-Hallucination Methodological Extraction</p>
+              <p class="feature-body-text">
+                Condense dense 50-page manuscripts into structured, empirical syntheses. ASTRA accurately isolates experimental cohorts, control variables, quantitative results, and unstated assumptions, anchoring every single statement to page and line-level citations.
+              </p>
+
+              <div class="feature-details">
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Experimental variable & cohort isolation</span>
+                </div>
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Mathematical formula & statistical power breakdown</span>
+                </div>
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Reproducibility risk assessment & sample validation</span>
+                </div>
+              </div>
+
+              <div class="feature-footer">
+                <span class="feature-stat-pill">Accuracy: 99.4% Extraction Precision</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature Card 3: Research Connections -->
+          <article class="feature-card" id="feature-connections">
+            <div class="feature-card-glow" aria-hidden="true"></div>
+            <div class="feature-header">
+              <div class="feature-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+              </div>
+              <span class="feature-index">03</span>
+            </div>
+
+            <div class="feature-content">
+              <h3 class="feature-title">Research Connections</h3>
+              <p class="feature-headline-desc">Topological Knowledge Graphs & Interdisciplinary Bridges</p>
+              <p class="feature-body-text">
+                Break free from disciplinary echo chambers. ASTRA constructs multidimensional knowledge graphs linking biological pathways to chemical formulations, and physical principles to computational models, highlighting latent breakthroughs hidden in plain sight.
+              </p>
+
+              <div class="feature-details">
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Citation lineage & influence trajectory mapping</span>
+                </div>
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Cross-domain analog finder (e.g. physics to oncology)</span>
+                </div>
+                <div class="detail-item">
+                  <svg class="check-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Contradiction and controversy detection radar</span>
+                </div>
+              </div>
+
+              <div class="feature-footer">
+                <span class="feature-stat-pill">Network: 4.8B Relational Edges</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Contact Section -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-wrapper">
+
+          <!-- Left Info Column -->
+          <div class="contact-info">
+            <div class="eyebrow-pill">
+              <span class="pill-dot" aria-hidden="true"></span>
+              <span>Join the Future of Science</span>
+            </div>
+            <h2 id="contact-title" class="contact-title">
+              Request Platform Access or Institutional Demo
+            </h2>
+            <p class="contact-description">
+              Whether you are an independent doctoral student, a university lab director, or an enterprise research department, our team will configure an environment tailored to your domain.
+            </p>
+
+            <div class="contact-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="highlight-title">Institutional Integration</h4>
+                  <p class="highlight-text">Single Sign-On (SAML/OAuth) for university libraries and secure corporate repositories.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="highlight-title">Strict Data Sovereignty</h4>
+                  <p class="highlight-text">Unpublished hypotheses and proprietary lab data are never stored or used to train external models.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 14 14"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="highlight-title">Rapid Response Time</h4>
+                  <p class="highlight-text">Our academic liaisons typically review and provision new lab sandboxes within 24 business hours.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form Column -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form" novalidate>
+              <h3 class="form-header-title">Connect with Research Intelligence</h3>
+              <p class="form-header-subtitle">Fill out the details below and our team will get in touch.</p>
+
+              <!-- Accessible Alert / Status Region -->
+              <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite" tabIndex="-1"></div>
+
+              <!-- Name Field -->
+              <div class="form-group" id="group-name">
+                <label for="user-name" class="form-label">Full Name <span class="required-asterisk" aria-hidden="true">*</span></label>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="user-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="e.g. Dr. Jennifer Doudna"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    aria-describedby="name-error"
+                  />
+                  <span class="validation-icon" aria-hidden="true"></span>
+                </div>
+                <div id="name-error" class="field-error" aria-live="polite"></div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group" id="group-email">
+                <label for="user-email" class="form-label">Academic or Institutional Email <span class="required-asterisk" aria-hidden="true">*</span></label>
+                <div class="input-wrapper">
+                  <input
+                    type="email"
+                    id="user-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="e.g. j.doudna@berkeley.edu"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="email-error"
+                  />
+                  <span class="validation-icon" aria-hidden="true"></span>
+                </div>
+                <div id="email-error" class="field-error" aria-live="polite"></div>
+              </div>
+
+              <!-- Role Field -->
+              <div class="form-group" id="group-role">
+                <label for="user-role" class="form-label">Primary Academic / Industry Role</label>
+                <div class="select-wrapper">
+                  <select id="user-role" name="role" class="form-select">
+                    <option value="pi">Principal Investigator / Lab Director</option>
+                    <option value="postdoc">Postdoctoral Researcher</option>
+                    <option value="student">Graduate / PhD Student</option>
+                    <option value="industry">Industry R&amp;D / Biotech Scientist</option>
+                    <option value="librarian">University Library / Information Specialist</option>
+                    <option value="other">Independent Inquirer</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group" id="group-message">
+                <label for="user-message" class="form-label">Research Objectives or Inquiry <span class="required-asterisk" aria-hidden="true">*</span></label>
+                <div class="input-wrapper">
+                  <textarea
+                    id="user-message"
+                    name="message"
+                    class="form-textarea"
+                    rows="4"
+                    placeholder="Briefly describe your discipline, current literature review challenges, or institutional requirements..."
+                    required
+                    aria-required="true"
+                    aria-describedby="message-error"
+                  ></textarea>
+                </div>
+                <div id="message-error" class="field-error" aria-live="polite"></div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                <span class="btn-text">Submit Research Inquiry</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+
+              <p class="form-disclaimer">
+                By submitting, you agree to ASTRA Research's academic privacy charter. We never sell, lease, or share researcher contact information.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo footer-logo" aria-label="ASTRA Research Home">
+            <svg class="brand-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="18" cy="18" r="16" stroke="url(#logo-grad-footer)" stroke-width="2" stroke-dasharray="3 2" />
+              <circle cx="18" cy="18" r="6" fill="#00D2FF" />
+              <path d="M18 4V10M18 26V32M4 18H10M26 18H32" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+              <defs>
+                <linearGradient id="logo-grad-footer" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00D2FF" />
+                  <stop offset="1" stop-color="#818CF8" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="brand-text-group">
+              <span class="brand-name">ASTRA<span class="brand-accent">.</span></span>
+              <span class="brand-tag">RESEARCH</span>
+            </div>
+          </a>
+          <p class="footer-mission">
+            Autonomous scientific literature intelligence dedicated to accelerating breakthrough discoveries, democratizing peer review, and unifying knowledge across all scientific disciplines.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About Platform</a></li>
+            <li><a href="#features">Core Features</a></li>
+            <li><a href="#workflow">Methodology</a></li>
+            <li><a href="#contact">Request Access</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Scientific Pillars</h4>
+          <ul class="footer-links">
+            <li><a href="#feature-discovery">Literature Discovery</a></li>
+            <li><a href="#feature-summaries">AI Research Summaries</a></li>
+            <li><a href="#feature-connections">Research Connections</a></li>
+            <li><a href="#about">Academic Ethics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Compliance &amp; Trust</h4>
+          <ul class="footer-links">
+            <li><span class="footer-text-link">SOC2 Type II Certified</span></li>
+            <li><span class="footer-text-link">HIPAA Research Compliant</span></li>
+            <li><span class="footer-text-link">Open Science Alignment</span></li>
+            <li><span class="footer-text-link">Data Sovereignty Guarantee</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; <span id="current-year">2026</span> ASTRA Research Technologies. All rights reserved. Completely static &amp; GitHub Pages compatible.
+        </p>
+        <div class="footer-bottom-actions">
+          <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top of page">
+            <span>Back to top</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
